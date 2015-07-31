@@ -1,0 +1,30 @@
+// Baseline mixin -------------------------------------------------------------
+//
+// Align type to the baseline
+// As found on: https://gist.github.com/razwan/10662500
+//
+// $font-size:		The desired font-size, in px
+// $scale:			The scale that defines the rhythm
+
+// Unitless value relative to 1em
+// Varies for every font
+$cap-height: 		0.68;
+ 
+@mixin baseline ($font-size, $scale: 2) {
+	// Rhythm unit
+	$rhythm: $base-line-height * $font-size / $scale;
+
+	// Number of rhythm units that can fit the font-size
+	$lines: ceil(($font-size + 0.001px) / $rhythm);
+
+	// New line-height
+	$line-height: $rhythm * $lines / $font-size;
+
+	// Distance to baseline
+	$baseline-distance: ($line-height - $cap-height) / 2;
+
+	font-size: $font-size;
+	line-height: $line-height;
+	padding-top: $baseline-distance + em;
+	margin-bottom: $base-line-height - $baseline-distance + em;
+}

@@ -1,0 +1,26 @@
+// General imports ------------------------------------------------------------
+//
+// These imports don't generate CSS, but make defined variables, functions,
+// and mixins available for further usage
+
+@import 'base/config_global';
+@import 'base/functions';
+@import 'base/config_site';
+@import 'base/state';
+
+// Module imports -------------------------------------------------------------
+
+//@import 'module/container';
+//@import 'module/font';
+//@import 'module/text';
+//@import 'module/reporting';
+//@import 'module/form';
+//@import 'module/button';
+
+// Vendor imports -------------------------------------------------------------
+
+//@import 'vendor/somestyles';
+
+// Page styles ----------------------------------------------------------------
+
+// YOUR PAGE-SPECIFIC STYLES HERE <---------

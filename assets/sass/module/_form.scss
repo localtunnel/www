@@ -1,0 +1,51 @@
+// Form Module ----------------------------------------------------------------
+//
+// Not as much a module, but separated as one to group all form styles
+
+fieldset,
+label {
+	@include rem(margin, 0, 0, strip($base-font-size));
+	padding: 0;
+
+	&:last-of-type,
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+label {
+	input {
+		@include rem(margin-top, 5);
+	}
+}
+
+// NOTE
+// 
+// This selector will affect <input type="submit"> elements.
+// Please use <button type="submit"></button> instead, unless
+// you aren't planning on using any HTML5 input types
+
+input,
+textarea {
+	@include rem(padding, 10, 20, 8);
+	border: 1px solid $black;
+	background: $white;
+	@include rem(border-radius, 5);
+	font-family: $font-stack;
+	color: $black;
+	line-height: 1.5;
+	@extend %is-antialiased;
+	
+	&:focus {
+		background-color: transparent;
+	}
+}
+
+// Style placeholder text
+// Includes class that the IE shim generates
+::placeholder,
+::-moz-placeholder,
+::-webkit-placeholder,
+.-placeholder {
+	color: #888;
+}

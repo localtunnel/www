@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    Apache Server Configs
+    HTML5, CSS3
+    SCSS, Normalize.css
+    jQuery, Ender, Respond, Selectivizr, Fastclick, Underscore, Console-shim, ie-behavior, respond, html5shiv
+    Headstart

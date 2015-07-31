@@ -1,0 +1,27 @@
+// Container Module -----------------------------------------------------------
+//
+// A centered block element with a maximum width.
+// Padded through $min-page-padding (_config_global.scss)
+
+%container {
+	@extend %is-cf;
+	width: 100% - 2*$min-page-padding;
+	max-width: $max-container-width;
+	margin: 0 auto;
+	
+	// Responsive images, yay!
+	img {
+	    height: auto;
+		max-width: 100%;
+		height: auto !important;
+		// Removes vertical whitespace inside of container
+		vertical-align: middle;
+	}
+}
+
+// Extend your own classes here to inherit container behaviour
+// or enable a global class to be used in your HTML
+
+/*.container {
+	@extend %container;
+}*/

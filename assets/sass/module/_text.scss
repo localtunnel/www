@@ -1,0 +1,56 @@
+// Selection color ------------------------------------------------------------
+
+::-moz-selection {
+    background: shade($white, 10);
+    text-shadow: none;
+}
+
+::selection {
+    background: $black;
+    text-shadow: none;
+}
+
+// General normalizing --------------------------------------------------------
+//
+// Headings, paragraphs and lists are provided with a lessened line-height,
+// and push down content below them by 1em. Also provided, but commented out,
+// is a rem based solution based on the $base-font-size
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	//@include rem(margin, 0, 0, strip($base-font-size)*1.5);
+	margin: 0 0 1em 0;
+
+	&:last-of-type:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// Headings -------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.3;
+}
+
+// Paragraphs -----------------------------------------------------------------
+
+p {
+	/**/
+}
+
+// Lists ----------------------------------------------------------------------
+
+ul {
+	padding: 0 0 0 1em;
+}
