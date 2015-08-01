@@ -1,40 +1,26 @@
-(function(window, $){
+(function(w){
 
 'use strict';
 
-// Underscore is bundled in with ender, so just require it
-// Comment out this line when using the separated Underscore file,
-// eg. when using jQuery
-var _ = require('underscore');
+// VARS
 
-// Document -------------------------------------------------------------------
+var
+	b     = document.body,
+	font = null
 
-// When using jQuery, use
-// $(document).ready(function () {
+// Load fonts if needed
 
-$.domReady(function () {
+if (!b.classList.contains('font-loaded')) {
+	font = new w.FontFaceObserver('Source Sans Pro', {})
+		.check()
+		.then(function(){
+			console.log('Font "Source Sans Pro" was loaded');
 
-	console.log('## Document ready');
+			b.classList.add('font-loaded');
+			w.Cookies.set('fontloaded', 'true', { expires: Infinity });
+		}, function () {
+			console.log('Font "Source Sans Pro" not available');
+		});
+}
 
-	// VARS -------------------------------------------------------------------
-	//
-
-	var
-		$window = $(window),
-		$body = $('body')
-	;
-
-	// ACTIONS ----------------------------------------------------------------
-	//
-
-	// $elem.on('something', doSomething);
-
-	//
-	// FUNCTIONS --------------------------------------------------------------
-	//
-
-	// function doSomething () {}
-
-});
-
-}(window, $));
+}(window));

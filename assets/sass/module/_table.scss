@@ -1,0 +1,18 @@
+// Table styles ---------------------------------------------------------------
+
+table {
+	width: 100%;
+}
+
+	th,
+	td {
+		padding: .5em;
+	}
+
+	th {
+		background: #999999;
+	}
+
+	tr:nth-child(even) td {
+		background: #EEEEEE;
+	} 

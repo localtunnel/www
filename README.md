@@ -1,4 +1,17 @@
-# [Headstart Boilerplate 1.2.1](http://headstart.io)
+# Localtunnel website static
 
-This repo contains the default files used to scaffold your [Headstart project](http://headstart.io).
+Made with [Headstart](http://headstart.io).
+
+To build production ready files, install Headstart ([requirements](http://headstart.io/installation#requirements)):
+```bash
+npm install -g headstart
+```
+
+Then run:
+```bash
+hs build --p
+```
+
+FIles will be located in the `export` folder.
+
 Licensed under MIT.

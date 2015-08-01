@@ -12,5 +12,6 @@
 	"export_misc": "export",
 	"assemble_templates": true,
 	"template_asset_prefix": "",
-	"revisionCaching": false
+	"revisionCaching": false,
+	"proxy": "http://localhost:8888/localtunnel/export"
 }

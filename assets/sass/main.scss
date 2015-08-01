@@ -14,22 +14,205 @@
 
 // Module imports -------------------------------------------------------------
 
-//@import 'module/container';
-//@import 'module/font';
-//@import 'module/text';
-//@import 'module/reporting';
-//@import 'module/form';
-//@import 'module/button';
+@import 'module/container';
+// @import 'module/column'
+// @import 'module/font';
+@import 'module/text';
+// @import 'module/table';
+// @import 'module/reporting';
+// @import 'module/button';
+// @import 'module/form';
 
 // Vendor imports -------------------------------------------------------------
 
 //@import 'vendor/somestyles';
 
+// Helpers --------------------------------------------------------------------
+
+.wr {
+	@extend %container;
+}
+
+.dib {
+	display: inline-block;
+}
+
+.pt-small {
+	padding-top: 20px;
+}
+
+.pb-small {
+	padding-bottom: 20px;
+}
+
+.pt-medium {
+	padding-top: 30px;
+}
+
+.pb-medium {
+	padding-bottom: 30px;
+}
+
+.pt-large {
+	padding-top: 50px;
+}
+
+.pb-large {
+	padding-bottom: 50px;
+}
+
+.is-hidden {
+	@extend %is-hidden;
+}
+
+.bc-endeavour {
+		background-color: $endeavour;
+}
+
+.c-white {
+	color: $white;
+}
+
 // Styles ---------------------------------------------------------------------
 
+header {
+	background: $picton-blue url(../images/pattern-on-picton-blue.png);
 
-// YOUR STYLES HERE <---------
+	@include highres() {
+		background-image: url(../images/pattern-on-picton-blue@2x.png);
+		background-size: 80px 80px;
+	}
+}
 
+	.header__logo {
+		line-height: 1;
+
+		a,
+		svg {
+			vertical-align: middle;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		svg {
+			position: relative;
+			top: -6px;
+			margin-right: 10px;
+			width: 38px;
+			height: 51px;
+			fill: $endeavour;
+		}
+	}
+
+	.header__subline {
+		color: $white;
+	}
+
+.main {
+	@include media-max(639) {
+		padding-bottom: 50px;
+	}
+
+	@include media-min(640) {
+		float: left;
+		width: 63.666666%;
+	}
+}
+
+	.main__article {
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+	}
+
+		.features__list {
+			padding-left: 0;
+			list-style-type: none;
+
+			svg {
+				position: absolute;
+				top: 5px;
+				left: 9px;
+				height: 16px;
+				margin-right: 15px;
+				transform: translateX(-50%);
+				fill: $body-color;
+				opacity: .5;
+			}
+
+			li {
+				position: relative;
+				padding-left: 30px;
+
+				&:not(:last-child) {
+					margin-bottom: 15px;
+
+					svg {
+						height: 16px;
+					}
+				}
+
+				&:nth-child(1) svg {
+					width: 12px;
+				}
+
+				&:nth-child(2) svg,
+				&:nth-child(3) svg {
+					width: 16px;
+				}
+
+				&:nth-child(4) svg {
+					height: 13px;
+					width: 18px;
+				}
+			}
+		}
+
+.main__sidebar {
+	@include media-min(640) {
+		float: right;
+		width: 31.333333%;
+	}
+
+	@include media-max(639) {
+		padding-top: 50px;
+		border-top: 1px solid $solitude;
+	}
+}
+
+footer {
+	background-image: url(../images/pattern-on-endeavour.png);
+
+	@include highres() {
+		background-image: url(../images/pattern-on-endeavour@2x.png);
+		background-size: 80px 80px;
+	}
+}
+
+.footer__monogram {
+	@include media-min(246) {
+		float: left;
+	}
+
+	svg {
+		display: block;
+		width: 26px;
+		height: 34px;
+		fill: $white;
+	}
+}
+
+.footer__github-link {
+	color: $white;
+
+	@include media-min(246) {
+		position: relative;
+		top: 4px;
+		float: right;
+	}
+}
 
 // Print ----------------------------------------------------------------------
 //

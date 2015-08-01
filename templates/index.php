@@ -1,0 +1,80 @@
+{{> layout/layout-top}}
+
+	{{> partials/svg}}
+	<!-- -->
+	<header class="pt-medium">
+		<h1 class="header__logo wr pb-medium">
+			<a class="c-white dib" href="index.php">
+				<svg class="dib" role="presentation" aria-hidden="true"><use xlink:href="#monogram"></use></svg>
+				<span>localtunnel</span>
+			</a>
+		</h1>
+		<h2 class="header__subline bc-endeavour pt-small pb-small">
+			<div class="wr">Expose yourself to the world</div>
+		</h2>
+	</header>
+	<!-- -->
+	<div class="wr pt-large pb-large">
+		<main class="main">
+			<article id="main-info" class="main__intro main__article">
+				<p><strong>Localtunnel allows you to easily share a web service on your local development machine without messing with DNS and firewall settings.</strong></p>
+				<p>Localtunnel will assign you a unique publicly accessible url that will proxy all requests to your locally running webserver.</p>
+			</article>
+			<article id="quickstart" class="main__quickstart main__article">
+				<h3>Quickstart</h3>
+				<p>Install Localtunnel globally (requires NodeJS) to make it accessible anywhere:</p>
+				<pre><code>npm install -g localtunnel</code></pre>
+				<p>Start a webserver on some local port (eg http://localhost:8000) and use the command line interface to request a tunnel to your local server:</p>
+				<pre><code>lt --port 8000</code></pre>
+				<p>You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. Any requests will be routed to your local service at the specified port.</p>
+			</article>
+			<article id="features" class="main__features main__article">
+				<h3>Features</h3>
+				<ul class="features__list">
+					<li>
+						<svg class="dib" role="presentation" aria-hidden="true"><use xlink:href="#lock-icon"></use></svg>
+						<span>Secure https for all tunnels</span>
+					</li>
+					<li>
+						<svg class="dib" role="presentation" aria-hidden="true"><use xlink:href="#device-icon"></use></svg>
+						<span>Show your work to anyone</span>
+					</li>
+					<li>
+						<svg class="dib" role="presentation" aria-hidden="true"><use xlink:href="#network-icon"></use></svg>
+						<span>Use the API to test webhooks</span>
+					</li>
+					<li>
+						<svg class="dib" role="presentation" aria-hidden="true"><use xlink:href="#cloud-icon"></use></svg>
+						<span>Test your UI in cloud browsers</span>
+					</li>
+				</ul>
+			</article>
+			<article id="developers" class="main__developers main__article">
+				<h3>Developers</h3>
+				<p>See the github page and wiki for information on clients in other languages and the full API for the tunnel proxy.</p>
+			</article>
+		</main>
+		<!-- -->
+		<aside class="main__sidebar">
+			<h3>Sponsored by</h3>
+			<p>
+				<a href="http://twitter.com/courseoff">@courseoff</a><br>
+				<a href="http://twitter.com/epicodus">@epicodus</a><br>
+				<a href="http://twitter.com/mashape">@mashape</a>
+			</p>
+			<h3>Maintained by</h3>
+			<p><a href="http://twitter.com/defunctzombie">@defunctzombie</a></p>
+		</aside>
+	</div>
+	<!-- -->
+	<footer class="bc-endeavour">
+		<div class="wr pt-medium pb-medium">
+			<a class="footer__monogram dib" href="index.php">
+				<svg role="presentation" aria-hidden="true"><use xlink:href="#monogram"></use></svg>
+				<span class="is-hidden">localtunnel</span>
+			</a>
+			<a class="footer__github-link c-white" href="https://github.com/defunctzombie/localtunnel"><strong>View the project on Github</strong></a>
+		</div>
+	</footer>
+
+{{> layout/layout-bottom}}

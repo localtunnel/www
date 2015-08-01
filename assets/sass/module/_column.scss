@@ -1,0 +1,30 @@
+// Columns Module --------------------------------------------------------------------
+//
+// Predefined column classes
+
+.col-2 {
+	&:nth-of-type(odd) {
+		@include column(2);
+	}
+	&:nth-of-type(even) {
+		@include column(2, true);
+	}
+}
+
+.col-3 {
+	&:not(:nth-of-type(3n)) {
+		@include column(3);
+	}
+	&:nth-of-type(3n) {
+		@include column(3, true);
+	}
+}
+
+.col-4 {
+	&:not(:nth-of-type(4n)) {
+		@include column(4);
+	}
+	&:nth-of-type(4n) {
+		@include column(4, true);
+	}
+}

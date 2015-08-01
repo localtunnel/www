@@ -12,10 +12,10 @@ $base-line-height: 	1.5;
 $total-columns: 12;
 $default-gutter-width: 5% !default;
 $default-column-breakpoint: 650px;
-$max-container-width: 1140px; 
+$max-container-width: 960px; 
 $min-page-padding: 4%;
 
 // Imports --------------------------------------------------------------------
 
-@import '../mixin/all';
 @import 'functions';
+@import '../mixin/all';

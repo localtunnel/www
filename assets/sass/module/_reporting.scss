@@ -1,87 +1,51 @@
 // Reporting Module -----------------------------------------------------------
 //
-// For everyone's feedback needs, the reporting module will provide
 // Easily setup Success, Error, Warning, and Info messages and lists
-//
-// Also, see the Utils.insertReporting() function for usage through javascipt
+
+$tintAmount: 80;
 
 .report {
+	padding: 1em 1.5em;
 	color: $reporting-text;
-	border: 1px solid transparent;
-	@include rem(padding, 10, 20);
-	@include rem(margin, 0, 0, strip($base-font-size)*1.5);
+	border-top-style: solid;
+	border-top-width: 4px;
 
-	&:last-of-type:last-child,
-	& > *:last-child {
-		margin-bottom: 0;
+	// Note: colors below are configured in _config_site.scss
+
+	&.is-success {
+		border-top-color: $reporting-success;
+		background: tint($reporting-success, $tintAmount);
 	}
 
-	& > *:first-child {
-		margin-top: 0;
+	&.is-info {
+		border-top-color: $reporting-info;
+		background: tint($reporting-info, $tintAmount);
+	}
+
+	&.is-warning {
+		border-top-color: $reporting-warning;
+		background: tint($reporting-warning, $tintAmount);
+	}
+
+	&.is-error {
+		border-top-color: $reporting-error;
+		background: tint($reporting-error, $tintAmount);
+	}
+
+	ul,
+	ol {
+		padding-left: 1.5em;
+	}
+
+	a,
+	a:visited,
+	a:hover,
+	a:active {
+		color: $reporting-text;
 	}
 }
 
 ul.report,
 ol.report {
-	@include rem(padding-left, 35);
-}
-
-// Modifiers ------------------------------------------------------------------
-//
-// Note: colors are set in _config_site.scss
-
-.report--success {
-	@extend .report;
-
-	background: $reporting-success-light;
-	border-color: $reporting-success;
-
-	a,
-	a:visited,
-	a:hover,
-	a:active {
-		color: shade($reporting-success, 60);
-	}
-}
-
-.report--error {
-	@extend .report;
-
-	background: $reporting-error-light;
-	border-color: $reporting-error;
-
-	a,
-	a:visited,
-	a:hover,
-	a:active {
-		color: shade($reporting-error, 60);
-	}
-}
-
-.report--warning {
-	@extend .report;
-
-	background: $reporting-warning-light;
-	border-color: $reporting-warning;
-
-	a,
-	a:visited,
-	a:hover,
-	a:active {
-		color: shade($reporting-warning, 60);
-	}
-}
-
-.report--info {
-	@extend .report;
-
-	background: $reporting-info-light;
-	border-color: $reporting-info;
-
-	a,
-	a:visited,
-	a:hover,
-	a:active {
-		color: shade($reporting-info, 60);
-	}
+	padding-left: 3em;
 }

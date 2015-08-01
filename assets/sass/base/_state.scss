@@ -35,6 +35,10 @@
 	font-variant: small-caps;
 }
 
+%is-centered {
+	text-align: center;
+}
+
 %is-cf:before,
 %is-cf:after {
 	content: '';

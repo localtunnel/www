@@ -5,21 +5,41 @@
 
 %button {
 	display: inline-block;
-	border: none; background: none;
-	outline: none;
+	padding: .5em 1em;
+	border: none;
+	border-radius: .3em;
+	background: tint($body-color, 90);
+	line-height: 1;
 	font-family: $font-stack;
 	text-decoration: none;
-	line-height: 1;
 	@extend %is-antialiased;
+	@extend %is-centered;
+
+	&:hover {
+		background: tint($body-color, 95);
+	}
+
+	&:active {
+		background: tint($body-color, 80);
+	}
 	
 	&:disabled {
 		opacity: 0.5;
+		background: tint($body-color, 90);
 	}
+
+	/* &:focus {
+		outline: none;
+	} */
 }
 
 // Modifiers ------------------------------------------------------------------
 //
 
+button,
+input[type=submit] {
+	@extend %button;
+}
 /*
 %button--grey {
 	@extend %button;

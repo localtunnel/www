@@ -1,26 +1,28 @@
 // Accent colors --------------------------------------------------------------
 
-
+$solitude: #ecf7ff;
+$picton-blue: #59b2f0;
+$endeavour: #0068b0;
+$prussian-blue: #002b48;
 
 // Greys ----------------------------------------------------------------------
 
 $white: #FFF;
 $black: #000;
 
+// Named references -----------------------------------------------------------
+
+$body-color: $prussian-blue;
+
 // Reporting ------------------------------------------------------------------
 //
 // Using in the Reporting module (module/_reporting.scss)
 
 $reporting-text: #333333;
-
 $reporting-success: #A2D69A;
-$reporting-success-light: #DEF1DD;
 $reporting-error: #F39B88;
-$reporting-error-light: #FADCD7;
 $reporting-warning: #F7E287;
-$reporting-warning-light: #FCF5D6;
 $reporting-info: #90B1D2;
-$reporting-info-light: #DAE5F0;
 
 // Font-stack -----------------------------------------------------------------
 //
@@ -32,4 +34,5 @@ $reporting-info-light: #DAE5F0;
 //
 // http://www.jordanm.co.uk/tinytype
 
-$font-stack: Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+$font-stack: "Helvetica Neue", Helvetica, Verdana, Roboto, sans-serif;
+$font-stack-custom: "Source Sans Pro", $font-stack;

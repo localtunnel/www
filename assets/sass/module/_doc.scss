@@ -14,18 +14,17 @@ html {
 }
 
 // Global styles
-html,
 body {
     font-family: $font-stack;
+	font-size: 100%;
+    color: $body-color;
+	@extend %is-antialiased;
     line-height: $base-line-height;
     background-color: $white;
-    color: $black;
-	height: 100%;
-	@extend %is-antialiased;
-}
 
-body {
-	font-size: 100%;
+	&.font-loaded {
+		font-family: $font-stack-custom;
+	}
 }
 
 // MS viewport fix
@@ -43,4 +42,5 @@ a,
 input,
 button {
 	-ms-touch-action: none !important;
+	touch-action: none !important;
 }

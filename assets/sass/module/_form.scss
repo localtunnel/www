@@ -1,10 +1,8 @@
 // Form Module ----------------------------------------------------------------
-//
-// Not as much a module, but separated as one to group all form styles
 
 fieldset,
 label {
-	@include rem(margin, 0, 0, strip($base-font-size));
+	margin: 0 0 rem($base-font-size);
 	padding: 0;
 
 	&:last-of-type,
@@ -13,9 +11,48 @@ label {
 	}
 }
 
+fieldset {
+	@extend %is-cf;
+	padding-top: 2em;
+	border: none;
+	border-top: 1px solid tint($body-color, 90);
+
+	legend {
+		display: block;
+		padding: 0 1em;
+		margin-left: 1em;
+		font-size: em(12);
+		text-align: left;
+		@extend %is-uppercase;
+		color: tint($body-color, 50);
+	}
+}
+
 label {
-	input {
-		@include rem(margin-top, 5);
+	display: block;
+
+	&:not(:last-child) {
+		margin-bottom: 1.5em;
+	}
+
+	span {
+		font-size: em(14);
+		color: tint($body-color, 50);
+
+		&:first-child {
+			display: block;
+		}
+
+		&:last-child {
+			display: inline-block;
+			margin-left: 1em;
+		}
+	}
+
+	input:last-child,
+	textarea:last-child,
+	select:last-child {
+		margin-top: .5em;
 	}
 }
 
@@ -26,11 +63,20 @@ label {
 // you aren't planning on using any HTML5 input types
 
 input,
+textarea,
+select {
+	width: 100%;
+
+	/* &:focus {
+		outline: none;
+	} */
+}
+
+input,
 textarea {
-	@include rem(padding, 10, 20, 8);
-	border: 1px solid $black;
+	padding: rem(10) rem(20) rem(8);
+	border: 1px solid tint($body-color, 90);
 	background: $white;
-	@include rem(border-radius, 5);
 	font-family: $font-stack;
 	color: $black;
 	line-height: 1.5;
@@ -39,6 +85,22 @@ textarea {
 	&:focus {
 		background-color: transparent;
 	}
+
+	&[disabled] {
+		opacity: .5;
+	}
+}
+
+input {
+	&[type=checkbox],
+	&[type=radio] {
+		display: inline-block;
+		width: auto;
+	}
+}
+
+textarea {
+	resize: vertical;
 }
 
 // Style placeholder text
