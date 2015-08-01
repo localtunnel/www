@@ -95,16 +95,20 @@ header {
 		a {
 			text-decoration: none;
 		}
+	}
 
-		svg {
-			position: relative;
-			top: -6px;
+		.header__logo__monogram {
 			margin-right: 10px;
 			width: 38px;
 			height: 51px;
 			fill: $endeavour;
 		}
-	}
+
+		.header__logo__text {
+			width: 200px;
+			height: 34px;
+			fill: $white;
+		}
 
 	.header__subline {
 		color: $white;

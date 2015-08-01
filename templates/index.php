@@ -5,8 +5,8 @@
 	<header class="pt-medium">
 		<h1 class="header__logo wr pb-medium">
 			<a class="c-white dib" href="index.php">
-				<svg class="dib" role="presentation" aria-hidden="true"><use xlink:href="#monogram"></use></svg>
-				<span>localtunnel</span>
+				<svg class="dib header__logo__monogram" role="presentation" aria-hidden="true"><use xlink:href="#monogram"></use></svg>
+				<svg class="dib header__logo__text" role="image" aria-label="Localtunnel"><use xlink:href="#logo-text"></use></svg>
 			</a>
 		</h1>
 		<h2 class="header__subline bc-endeavour pt-small pb-small">
