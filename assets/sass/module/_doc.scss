@@ -21,10 +21,6 @@ body {
 	@extend %is-antialiased;
     line-height: $base-line-height;
     background-color: $white;
-
-	&.font-loaded {
-		font-family: $font-stack-custom;
-	}
 }
 
 // MS viewport fix
