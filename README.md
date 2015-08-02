@@ -11,14 +11,16 @@ npm install -g headstart
 
 Then run:
 ```bash
-hs build --p
+make build
 ```
 
-FIles will be located in the `export` folder.
+Files will be located in the `export` folder.
 
-## Notes
+## Deploy to github pages
 
-The landing page uses some PHP to check if the custom font has been loaded before and sets a cookie if it does. This minimizes the FOUT on later visits.
+```bash
+make deploy
+```
 
 ## License
 
