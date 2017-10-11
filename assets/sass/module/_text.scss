@@ -1,12 +1,8 @@
 // Selection color ------------------------------------------------------------
 
-::-moz-selection {
-    background: shade($white, 10);
-    text-shadow: none;
-}
-
+::-moz-selection,
 ::selection {
-    background: $black;
+    background: shade($white, 10);
     text-shadow: none;
 }
 
